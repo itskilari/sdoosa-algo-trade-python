@@ -1,4 +1,4 @@
-
+''' To provide components of a trading symbol or instrument such as LTP, OHLC, OI data and volume '''
 class Quote:
   def __init__(self, tradingSymbol):
     self.tradingSymbol = tradingSymbol
