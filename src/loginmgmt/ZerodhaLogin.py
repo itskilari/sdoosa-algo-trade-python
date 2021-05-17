@@ -15,7 +15,7 @@ class ZerodhaLogin(BaseLogin):
     redirectUrl = None
     if 'request_token' in args:
       requestToken = args['request_token']
-      logging.info('Zerodha requestToken = %s', requestToken)
+      logging.info('Zerodha requestToken = %s', requestToken) #Zerodha logging info
       session = brokerHandle.generate_session(requestToken, api_secret=self.brokerAppDetails.appSecret)
       
       accessToken = session['access_token']
