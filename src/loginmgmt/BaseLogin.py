@@ -1,4 +1,4 @@
-
+''' BaseLogin class is to impliment login functions of Broker APIs includes brokerHandle, accessToken, brokerAppdetails, brokerHandle'''
 class BaseLogin:
 
   def __init__(self, brokerAppDetails):
