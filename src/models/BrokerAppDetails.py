@@ -1,4 +1,5 @@
 
+''' Provides broker application details Broker, app key, app secrete, client id  '''
 
 class BrokerAppDetails:
   def __init__(self, broker):
