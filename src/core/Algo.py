@@ -2,25 +2,28 @@ import logging
 import threading
 import time
 
+''' This module is for running algo , registering strategies and run threads for each strategy 
+    Imported modules are instruments, trademanager  and strategies
+                                                                                                '''
 from instruments.Instruments import Instruments
 from trademgmt.TradeManager import TradeManager
 
-from strategies.SampleStrategy import SampleStrategy
-from strategies.BNFORB30Min import BNFORB30Min
+from strategies.SampleStrategy import SampleStrategy # registered strategy
+from strategies.BNFORB30Min import BNFORB30Min       # registered strategy
 
 #from Test import Test
 
-class Algo:
+class Algo:   #Run Algo
   isAlgoRunning = None
 
   @staticmethod
-  def startAlgo():
-    if Algo.isAlgoRunning == True:
-      logging.info("Algo has already started..")
+  def startAlgo():    
+    if Algo.isAlgoRunning == True:    #check if algo running
+      logging.info("Algo has already started..") 
       return
     
-    logging.info("Starting Algo...")
-    Instruments.fetchInstruments()
+    logging.info("Starting Algo...")  
+    Instruments.fetchInstruments()    #Fetch instruments from Instruments module
 
     # start trade manager in a separate thread
     tm = threading.Thread(target=TradeManager.run)
