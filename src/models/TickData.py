@@ -1,4 +1,4 @@
-
+'''TickData Class To provide tick data of symbols and corresponding prices and data '''
 class TickData:
   def __init__(self, tradingSymbol):
     self.tradingSymbol = tradingSymbol
